@@ -12,7 +12,8 @@ The maze is generated with recursive digging, ensuring solvable paths and walls.
 
 
 here the code:
-import random  # For randomizing directions
+
+ import random  # For randomizing directions
 
 # Maze size (must be odd to work properly)
 SIZE = 11
@@ -86,3 +87,5 @@ maze[SIZE - 2][SIZE - 2] = ' '  # Make sure exit point is a path
 solve(1, 1)  # Find path from start to exit
 
 print_maze()  # Display the final maze with the path
+       
+   
