@@ -1,11 +1,10 @@
 # Maze-Generation-and-Recursive-Pathfinding
 Maze Generation
 
-We start by defining the start and finish points and ensure the maze has odd dimensions for proper wall placement. The maze is represented as a 2D grid, initially filled with walls ('#'). To generate paths, we dig two cells away in each direction to maintain walls between paths. Before digging, we check if the cell is valid (not already a path or border). The digging function continues recursively until no more valid paths can be created, ensuring the maze is solvable.
+We begin by setting the start and end points, and we make sure the maze has an odd size to allow proper wall placement. The maze is a 2D grid filled with walls ('#'). To create paths, we dig two cells at a time in random directions so that walls remain between paths. Before digging, we check if the next cell is within bounds and not already part of the path. The digging is done using recursion and continues until no more valid paths are left, ensuring the maze is solvable.
 
-
-Maze Solver (Backtracking)
-The maze solver uses backtracking to find a path from the start to the finish. It checks if the current cell is the finish and, if not, marks it as visited. It then tries moving in a random direction, recursively calling the solver from the new position. If it reaches a dead end, it backtracks, marking the cell as a path again, and tries another direction. This continues until the finish is found or all paths are exhausted.
+Maze Backtracking
+To solve the maze, we use a backtracking algorithm. It starts at the beginning and checks if the current cell is the goal. If not, it marks the cell as visited and tries to move in different directions. If it hits a dead end, it goes back and tries another direction. This recursive process continues until the end is found or all paths have been tried.
 
 
 The maze is generated with recursive digging, ensuring solvable paths and walls. The solver uses backtracking to explore possible paths and find the solution by trying all directions, backtracking when necessary.
