@@ -4,6 +4,8 @@ Maze Generation
 We begin by setting the start and end points, and we make sure the maze has an odd size to allow proper wall placement. The maze is a 2D grid filled with walls ('#'). To create paths, we dig two cells at a time in random directions so that walls remain between paths. Before digging, we check if the next cell is within bounds and not already part of the path. The digging is done using recursion and continues until no more valid paths are left, ensuring the maze is solvable.
 
 Maze Backtracking
+
+
 To solve the maze, we use a backtracking algorithm. It starts at the beginning and checks if the current cell is the goal. If not, it marks the cell as visited and tries to move in different directions. If it hits a dead end, it goes back and tries another direction. This recursive process continues until the end is found or all paths have been tried.
 
 
